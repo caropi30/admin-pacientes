@@ -1,6 +1,9 @@
 import { Paciente } from "../Paciente";
 
-const ListadoPacientes = () => {
+const ListadoPacientes = ({ pacientes }) => {
+  const [mascota, propietario, email, fecha, sintomas, id] = pacientes;
+
+  console.log(pacientes);
   return (
     <>
       <div className="md:w-1/2 lg:w-3/5 h-screen md:h-screen lg:overflow-y-scroll">
@@ -12,11 +15,9 @@ const ListadoPacientes = () => {
             Pacientes y Citas
           </span>
         </p>
-        <Paciente />
-        <Paciente />
-        <Paciente />
-        <Paciente />
-        <Paciente />
+        {pacientes.map((paciente) => (
+          <Paciente paciente={paciente} key={paciente.id} />
+        ))}
       </div>
     </>
   );

@@ -1,27 +1,22 @@
-const Paciente = () => {
+const Paciente = ({ paciente }) => {
+  const { mascota, propietario, email, fecha, sintomas } = paciente;
   return (
     <div className="m-3 bg-white shadow-lg px-5 py-10 rounded-xl">
       <p className="font-bold mb-3 tetx-gray-700 uppercase">
-        Nombre: <span className="font-normal normal-case">Hook</span>
+        Nombre: <span className="font-normal normal-case">{mascota}</span>
       </p>
       <p className="font-bold mb-3 tetx-gray-700 uppercase">
-        Propietario: <span className="font-normal normal-case">Carolina</span>
+        Propietario:{" "}
+        <span className="font-normal normal-case">{propietario}</span>
       </p>
       <p className="font-bold mb-3 tetx-gray-700 uppercase">
-        Email:{" "}
-        <span className="font-normal normal-case">caropi30@gmail.com</span>
+        Email: <span className="font-normal normal-case">{email}</span>
       </p>
       <p className="font-bold mb-3 tetx-gray-700 uppercase">
-        Fecha alta: <span className="font-normal normal-case">10/10/2022</span>
+        Fecha alta: <span className="font-normal normal-case">{fecha}</span>
       </p>
       <p className="font-bold mb-3 tetx-gray-700 uppercase">
-        Síntomas:{" "}
-        <span className="font-normal normal-case">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis sunt
-          similique neque, facere temporibus nostrum. Ad porro totam inventore
-          deleniti maxime pariatur, incidunt iure accusamus neque iste
-          accusantium beatae provident!
-        </span>
+        Síntomas: <span className="font-normal normal-case">{sintomas}</span>
       </p>
     </div>
   );
